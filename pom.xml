@@ -26,10 +26,9 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-                            <target>
-                                <echo message />
-                                <exec>git</exec>
-                            </target>
+                    		<echo>executing task</echo>
+				<echo>+++++++++++++</echo>
+				<echo>executed task</echo>
                         </configuration>
                     </execution>
                 </executions>
