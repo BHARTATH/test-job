@@ -17,8 +17,15 @@
  		<plugin>
         <artifactId>maven-myquery-plugin</artifactId>
         <version>1.0</version>
+	<executions>
+	 <execution>
+	<goals>
+              <goal>exec</goal>
+            </goals>
+	</execution>
+      </executions>
         <configuration>
-           <exec>
+          <executable>maven</executable>
           <url>http://www.foobar.com/query</url>
           <timeout>10</timeout>
           <options>
