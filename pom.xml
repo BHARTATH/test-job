@@ -14,25 +14,19 @@
     </properties>
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                        <configuration>
-                    		<echo>executing task</echo>
-				<echo>+++++++++++++</echo>
-				<echo>executed task</echo>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+ 		<plugin>
+        <artifactId>maven-myquery-plugin</artifactId>
+        <version>1.0</version>
+        <configuration>
+          <url>http://www.foobar.com/query</url>
+          <timeout>10</timeout>
+          <options>
+            <option>one</option>
+            <option>two</option>
+            <option>three</option>
+          </options>
+        </configuration>
+      </plugin>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
