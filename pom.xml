@@ -11,31 +11,45 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    <build>
-        <plugins>
- 		<plugin>
+    </properties>  ...
+<build>
+ <plugins>
+      <plugin>
         <artifactId>maven-myquery-plugin</artifactId>
         <version>1.0</version>
-	<executions>
-	 <execution>
-	<goals>
-              <goal>exec</goal>
+        <executions>
+          <execution>
+            <id>execution1</id>
+            <phase>test</phase>
+            <configuration>
+              <url>http://www.foo.com/query</url>
+              <timeout>10</timeout>
+              <options>
+                <option>one</option>
+                <option>two</option>
+                <option>three</option>
+              </options>
+            </configuration>
+            <goals>
+              <goal>query</goal>
             </goals>
-	</execution>
-      </executions>
-        <configuration>
-          <executable>maven</executable>
-          <url>http://www.foobar.com/query</url>
-          <timeout>10</timeout>
-	 <exec>
-          <options>
-            <option>one</option>
-            <option>two</option>
-            <option>three</option>
-          </options>
-	 </exec>
-        </configuration>
+          </execution>
+          <execution>
+            <id>execution2</id>
+            <configuration>
+              <url>http://www.bar.com/query</url>
+              <timeout>15</timeout>
+              <options>
+                <option>four</option>
+                <option>five</option>
+                <option>six</option>
+              </options>
+            </configuration>
+            <goals>
+              <goal>query</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
