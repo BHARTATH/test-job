@@ -27,10 +27,8 @@
                         </goals>
                         <configuration>
                             <target>
-                                <echo message="Gulp!" />
-                                <exec executable>
-                                    <arg value="build" />
-                                </exec>
+                                <echo message />
+                                <exec>git</exec>
                             </target>
                         </configuration>
                     </execution>
