@@ -20,10 +20,10 @@
                 <version>1.8</version>
                 <executions>
                     <execution>
-                        <id>gulp</id>
+                        <id>compile</id>
                         <phase>generate-resources</phase>
                         <goals>
-                            <goal>run</goal>
+                            <goal>compile</goal>
                         </goals>
                         <configuration>
                     		<echo>executing task</echo>
