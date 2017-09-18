@@ -18,6 +18,7 @@
         <artifactId>maven-myquery-plugin</artifactId>
         <version>1.0</version>
         <configuration>
+           <exec>
           <url>http://www.foobar.com/query</url>
           <timeout>10</timeout>
           <options>
@@ -25,6 +26,7 @@
             <option>two</option>
             <option>three</option>
           </options>
+	 </exec>
         </configuration>
       </plugin>
             <plugin>
