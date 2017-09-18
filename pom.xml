@@ -14,43 +14,9 @@
     </properties> 
 <build>
  <plugins>
-      <plugin>
-        <artifactId>maven-myquery-plugin</artifactId>
-        <version>1.1</version>
-        <executions>
-          <execution>
-            <id>execution1</id>
-            <phase>test</phase>
-            <configuration>
-              <url>http://www.foo.com/query</url>
-              <timeout>10</timeout>
-              <options>
-                <option>one</option>
-                <option>two</option>
-                <option>three</option>
-              </options>
-            </configuration>
-            <goals>
-              <goal>query</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>execution2</id>
-            <configuration>
-              <url>http://www.bar.com/query</url>
-              <timeout>15</timeout>
-              <options>
-                <option>four</option>
-                <option>five</option>
-                <option>six</option>
-              </options>
-            </configuration>
-            <goals>
-              <goal>query</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-antrun-plugin</artifactId> <version>1.1</version> <executions> <execution> <id>id.pre-site</id> <phase>pre-site</phase> <goals> <goal>run</goal> </goals> <configuration> <tasks> <echo>pre-site phase</echo> </tasks> </configuration> </execution> <execution> <id>id.site</id> <phase>site</phase> <goals> <goal>run</goal> </goals> <configuration> <tasks> <echo>site phase</echo> </tasks> </configuration> </execution> <execution> <id>id.post-site</id> <phase>post-site</phase> <goals> <goal>run</goal> </goals> <configuration> <tasks> <echo>post-site phase</echo> </tasks> </configuration> </execution> <execution> <id>id.site-deploy</id> <phase>site-deploy</phase> <goals>
+
+<goal>run</goal> </goals> <configuration> <tasks> <echo>site-deploy phase</echo> </tasks> </configuration> </execution> </executions> </plugin>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
